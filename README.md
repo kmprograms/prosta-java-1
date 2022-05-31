@@ -1,4 +1,4 @@
 Ucz się programowania na przykładzie prostej aplikacji Java!
 
-### [YouTube](https://youtu.be/vq8ODq4zsgg)
+### [YouTube](https://youtu.be/uPLZhYNVYWc)
 ### [KM Programs](https://km-programs.pl/)
