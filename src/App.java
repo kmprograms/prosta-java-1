@@ -1,22 +1,26 @@
+import java.util.Scanner;
+
 /*
-    Napisz program, w którym sprawdzisz, czy suma dwóch przykładowych
-    liczb całkowitych jest parzysta.
+    Napisz program, w którym pobierzesz od użytkownika trzy liczby całkowite i sprawdzisz,
+    czy w podanej kolejności tworzą ciąg arytmetyczny.
+    Przykład ciągu arytmetycznego: 2, 4, 6
 */
 public class App {
 
-    static boolean isEvenSum(int a, int b) {
-        /*var s = a + b;
-        if (s % 2 == 0) {
-            return true;
-        }
-        return false;*/
+    static int getIntNumber(String message) {
+        var sc = new Scanner(System.in);
+        System.out.printf("%s:%n", message);
+        return sc.nextInt();
+    }
 
-        return (a + b) % 2 == 0;
-
+    static boolean checkArithmeticSequence(int a, int b, int c) {
+        return b - a == c - b;
     }
 
     public static void main(String[] args) {
-        System.out.println(isEvenSum(10, 20));
-        System.out.println(isEvenSum(10, 21));
+        var n1 = getIntNumber("Podaj pierwszą liczbę");
+        var n2 = getIntNumber("Podaj drugą liczbę");
+        var n3 = getIntNumber("Podaj trzecią liczbę");
+        System.out.println(checkArithmeticSequence(n1, n2, n3) ? "TAK" : "NIE");
     }
 }
